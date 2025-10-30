@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Global Reset & Base Styles ---------- */
+html,
+body {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  @apply transition-colors duration-500;
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ---------- Theme Mode Base ---------- */
+.light {
+  background-color: #ffffff;
+  color: #1e293b;
+}
+
+.dark {
+  background-color: #000000;
+  color: #e5e7eb;
+}
+
+/* ---------- Utility ---------- */
+body {
+  @apply w-full min-h-screen overflow-x-hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
