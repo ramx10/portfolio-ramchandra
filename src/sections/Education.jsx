@@ -1,31 +1,31 @@
 import React from "react";
-import college1Logo from "../assets/adt.jpeg";   // Replace with actual filename
-import college2Logo from "../assets/wpu.png";   // Replace with actual filename
-import schoolLogo from "../assets/school.png";       // Replace with actual filename
+import college1Logo from "../assets/wpu.png";      // MIT WPU
+import college2Logo from "../assets/adt.jpeg";     // MIT ADT
+import schoolLogo from "../assets/school.png";     // School
 
 const Education = () => {
   const educationData = [
     {
       title: "Bachelor of Technology (B.Tech)",
-      institution: "MIT ADT UNIVERSITY,PUNE.",
+      institution: "MIT World Peace University, Kothrud, Pune",
       logo: college1Logo,
-      year: "2024 - Present",
+      year: "2022 - Present",
       description:
         "Pursuing B.Tech in Information Technology with a strong foundation in programming, web development, and AI technologies.",
     },
     {
       title: "Diploma in Computer Engineering",
-      institution: "MIT WORLD PEACE UNIVERSITY, KOTHRUD PUNE.",
+      institution: "MIT ADT University, Pune",
       logo: college2Logo,
-      year: "2022 - 2024",
+      year: "2019 - 2022",
       description:
         "Completed a diploma focused on computer systems, software engineering, and project-based learning.",
     },
     {
-      title: "Higher Secondary Education (SSC+HSC)",
-      institution: "SHETH JYOTIPRASAD VIDYALAY, DAUND.",
+      title: "Higher Secondary Education (SSC + HSC)",
+      institution: "Sheth Jyotiprasad Vidyalay, Daund",
       logo: schoolLogo,
-      year: "2018 - 2019",
+      year: "2017 - 2019",
       description:
         "Completed secondary education with an emphasis on science and mathematics.",
     },
@@ -34,7 +34,8 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="min-h-screen bg-gradient-to-br from-lightGradEnd to-lightGradStart dark:from-darkGradEnd dark:to-darkGradStart px-6 py-20 text-center"
+      className="min-h-screen bg-gradient-to-br from-lightGradEnd to-lightGradStart 
+                 dark:from-darkGradEnd dark:to-darkGradStart px-6 py-20 text-center"
     >
       <h2 className="text-4xl font-bold mb-12 text-gray-900 dark:text-white">
         Education
@@ -44,14 +45,17 @@ const Education = () => {
         {educationData.map((edu, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row items-center md:items-start bg-white/60 dark:bg-gray-800/60 backdrop-blur-md p-6 rounded-xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
+            className="flex flex-col md:flex-row items-center md:items-start 
+                       bg-white/60 dark:bg-gray-800/60 backdrop-blur-md p-6 
+                       rounded-xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
           >
             {/* Logo Section */}
             <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
               <img
                 src={edu.logo}
                 alt={`${edu.institution} logo`}
-                className="w-20 h-20 object-contain rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm"
+                className="w-20 h-20 object-contain rounded-lg border 
+                           border-gray-200 dark:border-gray-700 shadow-sm"
               />
             </div>
 
