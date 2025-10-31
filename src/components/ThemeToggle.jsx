@@ -1,24 +1,46 @@
+import React from "react";
 import { useTheme } from "../themes/ThemeContext";
 
-export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+const Navbar = () => {
+  const { theme, toggleTheme } = useTheme();
+
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <label className="relative inline-flex items-center cursor-pointer select-none">
-      <input
-        type="checkbox"
-        className="sr-only peer"
-        checked={theme === "dark"}
-        onChange={() => setTheme(theme === "light" ? "dark" : "light")}
-      />
-      <span
-        className="w-10 h-5 bg-gray-300 rounded-full peer-checked:bg-blue-600
-                   transition-colors duration-500"
-      ></span>
-      <span
-        className="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full shadow 
-                   transition-transform duration-500 peer-checked:translate-x-5"
-      ></span>
-    </label>
+    <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm flex justify-between items-center px-6 py-4">
+      <h1 className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+        Ramchandra
+      </h1>
+      <ul className="hidden md:flex gap-6 text-gray-700 dark:text-gray-200 font-medium">
+        {[
+          "home",
+          "about",
+          "education",
+          "skills",
+          "experience",
+          "projects",
+          "certifications",
+          "contact",
+        ].map((item) => (
+          <li
+            key={item}
+            onClick={() => scrollToSection(item)}
+            className="cursor-pointer hover:text-blue-500 transition-colors"
+          >
+            {item.charAt(0).toUpperCase() + item.slice(1)}
+          </li>
+        ))}
+      </ul>
+      <button
+        onClick={toggleTheme}
+        className="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700"
+      >
+        {theme === "light" ? "🌙" : "☀️"}
+      </button>
+    </nav>
   );
-}
+};
+
+export default Navbar;

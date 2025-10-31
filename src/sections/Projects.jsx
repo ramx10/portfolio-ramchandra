@@ -6,21 +6,21 @@ const projects = [
     title: "AI Travel Buddy",
     description:
       "Android app that provides smart travel recommendations and manages trip expenses with AI integration.",
-    image: "/projects/ai-travel-buddy.png",
+    image: "/projects/AI_Travel_Buddy_Andr.png",
     github: "https://github.com/shipalkarram/ai-travel-buddy",
   },
   {
     title: "CNN Image Classification",
     description:
       "Deep learning project using Convolutional Neural Networks to classify and detect objects from image datasets.",
-    image: "/projects/cnn-model.png",
+    image: "/projects/CNN_Image_Classifica.png",
     github: "https://github.com/shipalkarram/cnn-model",
   },
   {
     title: "Django Full‑Stack Web Apps",
     description:
       "Multiple full‑stack web applications created with Django and MySQL, focusing on business‑logic automation.",
-    image: "/projects/django-web.png",
+    image: "/projects/Multiple_full‑stack.png",
     github: "https://github.com/shipalkarram/django-web",
   },
 ];

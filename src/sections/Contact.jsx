@@ -2,9 +2,23 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    await fetch("/send_mail.php", { method: "POST", body: formData });
-    alert("Message sent successfully!");
-    e.target.reset();
+
+    try {
+      const response = await fetch("/php/sendMail.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert("✅ Message sent successfully!");
+        e.target.reset();
+      } else {
+        alert("⚠️ Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("❌ Something went wrong. Check console for details.");
+    }
   };
 
   return (
@@ -21,7 +35,7 @@ export default function Contact() {
       "
     >
       <h2 className="text-4xl font-bold mb-10 text-gray-900 dark:text-gray-100">
-        Contact Me
+        Contact Me
       </h2>
 
       <form
@@ -31,7 +45,7 @@ export default function Contact() {
         <input
           name="name"
           type="text"
-          placeholder="Your Name"
+          placeholder="Your Name"
           className="w-full p-3 rounded bg-white text-black 
                      dark:bg-gray-800 dark:text-gray-100 focus:outline-none"
           required
@@ -40,7 +54,7 @@ export default function Contact() {
         <input
           name="email"
           type="email"
-          placeholder="Your Email"
+          placeholder="Your Email"
           className="w-full p-3 rounded bg-white text-black 
                      dark:bg-gray-800 dark:text-gray-100 focus:outline-none"
           required

@@ -5,22 +5,26 @@ const certificates = [
   {
     title: "Java Programming",
     issuer: "IIT Bombay",
-    image: "/certificates/java-iitb.jpg",
+    image: "/certificates/iit.png",
+    link: "https://drive.google.com/file/d/1-aEvZeQTEP29merjTTE2NM_Px_vAkqsK/view?usp=drive_link", // 🔁 Replace this with your real link
   },
   {
-    title: "IBM Skill Build – Generative AI",
-    issuer: "IBM & AICTE",
-    image: "/certificates/ibm-genai.jpg",
+    title: "IBM Skill Build – Generative AI",
+    issuer: "IBM & AICTE",
+    image: "/certificates/IBM.png",
+    link: "https://drive.google.com/file/d/1wEkzjNGiDVZq2cipqVdFbRMnp6QzQbkz/view?usp=drive_link",
   },
   {
     title: "OCI Data Science",
     issuer: "Oracle Cloud Infrastructure",
-    image: "/certificates/oci-data.jpg",
+    image: "/certificates/oracle.png",
+    link: "https://drive.google.com/file/d/1KqrhvUYtcceCZtiJQs71G5zbgpJBJ_1T/view?usp=drive_link",
   },
   {
     title: "Machine Learning",
     issuer: "Intellipaat",
-    image: "/certificates/intellipaat-ml.jpg",
+    image: "/certificates/Intellipaat_Machine.png",
+    link: "https://drive.google.com/file/d/13Co6c5dB8618_Jo592c_sOPTXWhsyIL-/view?usp=drive_link",
   },
 ];
 
@@ -38,19 +42,30 @@ export default function Certifications() {
         {certificates.map((cert, index) => (
           <div
             key={index}
-            className="glassmorphism rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-300 shadow-md"
+            className="glassmorphism rounded-xl p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300 shadow-md"
           >
             <img
               src={cert.image}
               alt={cert.title}
-              className="rounded-lg mb-4 w-40 h-40 object-cover border border-white/20"
+              className="rounded-lg mb-4 w-40 h-40 object-cover border border-white/20 shadow-sm"
             />
-            <h3 className="text-lg font-semibold text-blue-700 dark:text-yellow-300">
+            <h3 className="text-lg font-semibold text-blue-700 dark:text-yellow-300 mb-1">
               {cert.title}
             </h3>
-            <p className="text-sm text-gray-700 dark:text-gray-300">
+            <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
               {cert.issuer}
             </p>
+
+            {cert.link && (
+              <a
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 text-sm font-medium text-white bg-blue-600 dark:bg-yellow-400 dark:text-gray-900 rounded-full hover:opacity-90 transition"
+              >
+                View Certificate
+              </a>
+            )}
           </div>
         ))}
       </div>
