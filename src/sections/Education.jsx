@@ -7,23 +7,23 @@ const Education = () => {
   const educationData = [
     {
       title: "Bachelor of Technology (B.Tech)",
-      institution: "Your Current College Name",
+      institution: "MIT ADT UNIVERSITY,PUNE.",
       logo: college1Logo,
-      year: "2022 - Present",
+      year: "2024 - Present",
       description:
-        "Pursuing B.Tech in Computer Science with a strong foundation in programming, web development, and AI technologies.",
+        "Pursuing B.Tech in Information Technology with a strong foundation in programming, web development, and AI technologies.",
     },
     {
       title: "Diploma in Computer Engineering",
-      institution: "Your Diploma College Name",
+      institution: "MIT WORLD PEACE UNIVERSITY, KOTHRUD PUNE.",
       logo: college2Logo,
-      year: "2019 - 2022",
+      year: "2022 - 2024",
       description:
         "Completed a diploma focused on computer systems, software engineering, and project-based learning.",
     },
     {
-      title: "Higher Secondary Education (10th)",
-      institution: "Your School Name",
+      title: "Higher Secondary Education (SSC+HSC)",
+      institution: "SHETH JYOTIPRASAD VIDYALAY, DAUND.",
       logo: schoolLogo,
       year: "2018 - 2019",
       description:
